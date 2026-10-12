@@ -1,0 +1,747 @@
+{
+  "format": "ajet-account-transfer-v1",
+  "exportedAt": "2026-10-12T10:23:23.032Z",
+  "sourceCommit": "0688025727a91db20477d6fa73786982d32f0b57",
+  "schema": [
+    "CREATE TABLE `audit_logs` (\r\n\t`id` text PRIMARY KEY NOT NULL,\r\n\t`tenant_id` text NOT NULL,\r\n\t`workspace_id` text NOT NULL,\r\n\t`user_id` text NOT NULL,\r\n\t`action` text NOT NULL,\r\n\t`target_type` text NOT NULL,\r\n\t`target_id` text NOT NULL,\r\n\t`previous_value` text,\r\n\t`new_value` text,\r\n\t`session_info` text,\r\n\t`result` text DEFAULT 'success' NOT NULL,\r\n\t`created_at` integer NOT NULL\r\n)",
+    "CREATE TABLE `cities` (\r\n\t`id` text PRIMARY KEY NOT NULL,\r\n\t`country_id` text NOT NULL,\r\n\t`name` text NOT NULL,\r\n\t`display_name` text NOT NULL\r\n)",
+    "CREATE TABLE `countries` (\r\n\t`id` text PRIMARY KEY NOT NULL,\r\n\t`iso2_code` text NOT NULL,\r\n\t`iso3_code` text NOT NULL,\r\n\t`name_tr` text NOT NULL,\r\n\t`name_en` text NOT NULL,\r\n\t`region_id` text\r\n)",
+    "CREATE TABLE `country_aliases` (\r\n\t`alias` text PRIMARY KEY NOT NULL,\r\n\t`country_id` text NOT NULL\r\n)",
+    "CREATE TABLE `export_jobs` (\r\n\t`id` text PRIMARY KEY NOT NULL,\r\n\t`workspace_id` text NOT NULL,\r\n\t`user_id` text NOT NULL,\r\n\t`export_type` text NOT NULL,\r\n\t`file_name` text NOT NULL,\r\n\t`filter_state` text NOT NULL,\r\n\t`include_test_data` integer DEFAULT false NOT NULL,\r\n\t`status` text DEFAULT 'completed' NOT NULL,\r\n\t`r2_key` text,\r\n\t`created_at` integer NOT NULL,\r\n\t`deleted_at` integer\r\n, `size_bytes` integer)",
+    "CREATE TABLE `maintenance_operations` (\r\n\t`id` text PRIMARY KEY NOT NULL,\r\n\t`completed_at` integer NOT NULL,\r\n\t`actor_user_id` text NOT NULL\r\n)",
+    "CREATE TABLE `permissions` (\r\n\t`code` text PRIMARY KEY NOT NULL,\r\n\t`name` text NOT NULL\r\n)",
+    "CREATE TABLE `port_mapping_history` (\r\n\t`id` text PRIMARY KEY NOT NULL,\r\n\t`port_id` text,\r\n\t`station_code` text NOT NULL,\r\n\t`action` text NOT NULL,\r\n\t`previous_value` text,\r\n\t`new_value` text,\r\n\t`changed_by` text NOT NULL,\r\n\t`created_at` integer NOT NULL\r\n)",
+    "CREATE TABLE `ports` (\r\n\t`id` text PRIMARY KEY NOT NULL,\r\n\t`region_code` text NOT NULL,\r\n\t`region_name` text NOT NULL,\r\n\t`country_code` text NOT NULL,\r\n\t`country_name` text NOT NULL,\r\n\t`city_name` text NOT NULL,\r\n\t`station_code` text NOT NULL,\r\n\t`station_name` text NOT NULL,\r\n\t`active_status` text DEFAULT 'active' NOT NULL\r\n, `iata_code` text, `airport_name` text, `short_name` text, `city_id` text, `country_id` text, `region_id` text, `display_city` text, `created_at` integer DEFAULT 0 NOT NULL, `updated_at` integer DEFAULT 0 NOT NULL)",
+    "CREATE TABLE `quality_weights` (\r\n\t`workspace_id` text PRIMARY KEY NOT NULL,\r\n\t`completeness` real DEFAULT 0.4 NOT NULL,\r\n\t`validity` real DEFAULT 0.3 NOT NULL,\r\n\t`uniqueness` real DEFAULT 0.2 NOT NULL,\r\n\t`consistency` real DEFAULT 0.1 NOT NULL,\r\n\t`updated_by` text NOT NULL,\r\n\t`updated_at` integer NOT NULL\r\n)",
+    "CREATE TABLE `rate_limits` (\r\n\t`key` text PRIMARY KEY NOT NULL,\r\n\t`attempts` integer DEFAULT 0 NOT NULL,\r\n\t`window_started_at` integer NOT NULL,\r\n\t`blocked_until` integer\r\n)",
+    "CREATE TABLE `regions` (\r\n\t`id` text PRIMARY KEY NOT NULL,\r\n\t`code` text NOT NULL,\r\n\t`name` text NOT NULL\r\n)",
+    "CREATE TABLE `role_permissions` (\r\n\t`role_code` text NOT NULL,\r\n\t`permission_code` text NOT NULL\r\n)",
+    "CREATE TABLE `roles` (\r\n\t`code` text PRIMARY KEY NOT NULL,\r\n\t`name` text NOT NULL,\r\n\t`description` text DEFAULT '' NOT NULL\r\n)",
+    "CREATE TABLE `saved_views` (\r\n\t`id` text PRIMARY KEY NOT NULL,\r\n\t`workspace_id` text NOT NULL,\r\n\t`user_id` text NOT NULL,\r\n\t`name` text NOT NULL,\r\n\t`filter_state` text NOT NULL,\r\n\t`is_default` integer DEFAULT false NOT NULL,\r\n\t`created_at` integer NOT NULL\r\n)",
+    "CREATE TABLE \"station_performance\" (\r\n\t`id` text PRIMARY KEY NOT NULL,\r\n\t`tenant_id` text NOT NULL,\r\n\t`workspace_id` text NOT NULL,\r\n\t`owner_user_id` text NOT NULL,\r\n\t`created_by` text NOT NULL,\r\n\t`updated_by` text NOT NULL,\r\n\t`upload_id` text NOT NULL,\r\n\t`provider` text NOT NULL,\r\n\t`period` text NOT NULL,\r\n\t`station_code` text NOT NULL,\r\n\t`port_id` text,\r\n\t`location_mapping_status` text DEFAULT 'unresolved' NOT NULL,\r\n\t`flights` integer NOT NULL,\r\n\t`passengers` integer,\r\n\t`unread_documents` integer,\r\n\t`visa_passport_issues` integer,\r\n\t`gse_damage_reports` integer,\r\n\t`digital_boarding_ratio` real,\r\n\t`delay_minutes` integer,\r\n\t`doc_ratio` real,\r\n\t`doc_count` integer,\r\n\t`international_passengers` integer,\r\n\t`damaged_ratio` real,\r\n\t`damaged_count` integer,\r\n\t`lost_ratio` real,\r\n\t`lost_count` integer,\r\n\t`safety_ratio` real,\r\n\t`safety_count` integer,\r\n\t`non_safety_ratio` real,\r\n\t`non_safety_count` integer,\r\n\t`safety_reports` integer,\r\n\t`otp_ratio` real,\r\n\t`ota_ratio` real,\r\n\t`complaint_days` real,\r\n\t`source_row` integer NOT NULL,\r\n\t`validation_status` text DEFAULT 'valid' NOT NULL,\r\n\t`created_at` integer NOT NULL\r\n)",
+    "CREATE TABLE `uploads` (\r\n\t`id` text PRIMARY KEY NOT NULL,\r\n\t`tenant_id` text NOT NULL,\r\n\t`workspace_id` text NOT NULL,\r\n\t`owner_user_id` text NOT NULL,\r\n\t`created_by` text NOT NULL,\r\n\t`updated_by` text NOT NULL,\r\n\t`file_name` text NOT NULL,\r\n\t`r2_key` text NOT NULL,\r\n\t`provider` text NOT NULL,\r\n\t`period` text NOT NULL,\r\n\t`source_sheet` text NOT NULL,\r\n\t`row_count` integer NOT NULL,\r\n\t`valid_count` integer NOT NULL,\r\n\t`warning_count` integer NOT NULL,\r\n\t`error_count` integer NOT NULL,\r\n\t`mapping_version` text NOT NULL,\r\n\t`version_number` integer DEFAULT 1 NOT NULL,\r\n\t`replaces_upload_id` text,\r\n\t`is_active_version` integer DEFAULT true NOT NULL,\r\n\t`is_test_data` integer DEFAULT false NOT NULL,\r\n\t`import_status` text DEFAULT 'completed' NOT NULL,\r\n\t`superseded_at` integer,\r\n\t`deleted_at` integer,\r\n\t`deleted_by` text,\r\n\t`deletion_reason` text,\r\n\t`deletion_status` text DEFAULT 'active' NOT NULL,\r\n\t`created_at` integer NOT NULL,\r\n\t`updated_at` integer NOT NULL\r\n, `title` text, `import_selection` text)",
+    "CREATE TABLE `user_preferences` (\r\n\t`user_id` text PRIMARY KEY NOT NULL,\r\n\t`default_period` text,\r\n\t`comparison_period` text,\r\n\t`default_provider` text,\r\n\t`default_region` text,\r\n\t`default_country` text,\r\n\t`default_city` text,\r\n\t`default_port` text,\r\n\t`sidebar_collapsed` integer DEFAULT false NOT NULL,\r\n\t`dashboard_layout` text,\r\n\t`updated_at` integer NOT NULL\r\n)",
+    "CREATE TABLE `user_sessions` (\r\n\t`id` text PRIMARY KEY NOT NULL,\r\n\t`user_id` text NOT NULL,\r\n\t`token_hash` text NOT NULL,\r\n\t`created_at` integer NOT NULL,\r\n\t`last_seen_at` integer NOT NULL,\r\n\t`expires_at` integer NOT NULL,\r\n\t`revoked_at` integer,\r\n\t`ip_hash` text,\r\n\t`user_agent` text\r\n)",
+    "CREATE TABLE `users` (\r\n\t`id` text PRIMARY KEY NOT NULL,\r\n\t`email` text NOT NULL,\r\n\t`full_name` text NOT NULL,\r\n\t`role_code` text DEFAULT 'analyst' NOT NULL,\r\n\t`status` text DEFAULT 'active' NOT NULL,\r\n\t`last_login_at` integer,\r\n\t`force_logout_at` integer,\r\n\t`created_at` integer NOT NULL,\r\n\t`updated_at` integer NOT NULL\r\n, `first_name` text, `last_name` text, `password_hash` text, `force_password_change` integer DEFAULT false NOT NULL, `password_changed_at` integer, `failed_login_attempts` integer DEFAULT 0 NOT NULL, `locked_until` integer, `data_scope` text DEFAULT 'own_workspace' NOT NULL, `created_by_user_id` text, `archived_at` integer, `archived_by_user_id` text)",
+    "CREATE TABLE `workspace_members` (\r\n\t`workspace_id` text NOT NULL,\r\n\t`user_id` text NOT NULL,\r\n\t`access_level` text DEFAULT 'owner' NOT NULL\r\n)",
+    "CREATE TABLE `workspaces` (\r\n\t`id` text PRIMARY KEY NOT NULL,\r\n\t`name` text NOT NULL,\r\n\t`owner_user_id` text NOT NULL,\r\n\t`tenant_id` text NOT NULL,\r\n\t`workspace_type` text DEFAULT 'personal' NOT NULL,\r\n\t`created_at` integer NOT NULL\r\n)",
+    "CREATE INDEX `audit_workspace_created_idx` ON `audit_logs` (`workspace_id`,`created_at`)",
+    "CREATE UNIQUE INDEX `city_country_name_unique` ON `cities` (`country_id`,`name`)",
+    "CREATE UNIQUE INDEX `countries_iso2_code_unique` ON `countries` (`iso2_code`)",
+    "CREATE UNIQUE INDEX `countries_iso3_code_unique` ON `countries` (`iso3_code`)",
+    "CREATE INDEX `port_history_code_created_idx` ON `port_mapping_history` (`station_code`,`created_at`)",
+    "CREATE UNIQUE INDEX `ports_iata_code_unique` ON `ports` (`iata_code`)",
+    "CREATE UNIQUE INDEX `ports_station_code_unique` ON `ports` (`station_code`)",
+    "CREATE UNIQUE INDEX `regions_code_unique` ON `regions` (`code`)",
+    "CREATE UNIQUE INDEX `role_permission_unique` ON `role_permissions` (`role_code`,`permission_code`)",
+    "CREATE INDEX `station_port_idx` ON `station_performance` (`port_id`)",
+    "CREATE UNIQUE INDEX `station_upload_unique` ON `station_performance` (`upload_id`,`station_code`)",
+    "CREATE INDEX `station_workspace_period_idx` ON `station_performance` (`workspace_id`,`period`)",
+    "CREATE INDEX `uploads_owner_idx` ON `uploads` (`owner_user_id`)",
+    "CREATE INDEX `uploads_workspace_period_idx` ON `uploads` (`workspace_id`,`period`)",
+    "CREATE INDEX `user_session_token_idx` ON `user_sessions` (`token_hash`)",
+    "CREATE INDEX `user_session_user_idx` ON `user_sessions` (`user_id`)",
+    "CREATE UNIQUE INDEX `user_sessions_token_hash_unique` ON `user_sessions` (`token_hash`)",
+    "CREATE UNIQUE INDEX `users_email_unique` ON `users` (`email`)",
+    "CREATE UNIQUE INDEX `workspace_member_unique` ON `workspace_members` (`workspace_id`,`user_id`)",
+    "CREATE INDEX `workspace_member_user_idx` ON `workspace_members` (`user_id`)"
+  ],
+  "inserts": [
+    {
+      "sql": "INSERT INTO \"roles\" (\"code\",\"name\",\"description\") VALUES (?,?,?)",
+      "values": [
+        "admin",
+        "Admin",
+        "Kullanıcı, kapsam ve dosya yaşam döngüsünü yönetir."
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"roles\" (\"code\",\"name\",\"description\") VALUES (?,?,?)",
+      "values": [
+        "analyst",
+        "Analist",
+        "Dashboard, analiz ve export özelliklerini kullanır."
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"roles\" (\"code\",\"name\",\"description\") VALUES (?,?,?)",
+      "values": [
+        "data_manager",
+        "Veri Yöneticisi",
+        "Dosya, mapping ve veri kalitesi işlemlerini yönetir."
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"roles\" (\"code\",\"name\",\"description\") VALUES (?,?,?)",
+      "values": [
+        "manager",
+        "Yönetici",
+        "Yönetici özetlerini ve raporları görüntüler."
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"roles\" (\"code\",\"name\",\"description\") VALUES (?,?,?)",
+      "values": [
+        "readonly",
+        "Salt Okunur Kullanıcı",
+        "Yalnızca yetkili dashboard kapsamını görüntüler."
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"roles\" (\"code\",\"name\",\"description\") VALUES (?,?,?)",
+      "values": [
+        "super_admin",
+        "Super Admin",
+        "Tüm workspacelere ve sistem ayarlarına erişir."
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"roles\" (\"code\",\"name\",\"description\") VALUES (?,?,?)",
+      "values": [
+        "viewer",
+        "Salt Okunur Kullanıcı",
+        "Yalnızca yetkili dashboard kapsamını görüntüler."
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"permissions\" (\"code\",\"name\") VALUES (?,?)",
+      "values": [
+        "audit.view",
+        "audit.view"
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"permissions\" (\"code\",\"name\") VALUES (?,?)",
+      "values": [
+        "dashboard.view",
+        "dashboard.view"
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"permissions\" (\"code\",\"name\") VALUES (?,?)",
+      "values": [
+        "export.excel",
+        "export.excel"
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"permissions\" (\"code\",\"name\") VALUES (?,?)",
+      "values": [
+        "export.pdf",
+        "export.pdf"
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"permissions\" (\"code\",\"name\") VALUES (?,?)",
+      "values": [
+        "kpi.manage",
+        "kpi.manage"
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"permissions\" (\"code\",\"name\") VALUES (?,?)",
+      "values": [
+        "mapping.manage",
+        "mapping.manage"
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"permissions\" (\"code\",\"name\") VALUES (?,?)",
+      "values": [
+        "upload.create",
+        "upload.create"
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"permissions\" (\"code\",\"name\") VALUES (?,?)",
+      "values": [
+        "upload.delete",
+        "upload.delete"
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"permissions\" (\"code\",\"name\") VALUES (?,?)",
+      "values": [
+        "upload.restore",
+        "upload.restore"
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"permissions\" (\"code\",\"name\") VALUES (?,?)",
+      "values": [
+        "user.create",
+        "user.create"
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"permissions\" (\"code\",\"name\") VALUES (?,?)",
+      "values": [
+        "user.deactivate",
+        "user.deactivate"
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"permissions\" (\"code\",\"name\") VALUES (?,?)",
+      "values": [
+        "user.update",
+        "user.update"
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"permissions\" (\"code\",\"name\") VALUES (?,?)",
+      "values": [
+        "workspace.view_all",
+        "workspace.view_all"
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"role_permissions\" (\"role_code\",\"permission_code\") VALUES (?,?)",
+      "values": [
+        "super_admin",
+        "user.create"
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"role_permissions\" (\"role_code\",\"permission_code\") VALUES (?,?)",
+      "values": [
+        "super_admin",
+        "user.update"
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"role_permissions\" (\"role_code\",\"permission_code\") VALUES (?,?)",
+      "values": [
+        "super_admin",
+        "user.deactivate"
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"role_permissions\" (\"role_code\",\"permission_code\") VALUES (?,?)",
+      "values": [
+        "super_admin",
+        "upload.create"
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"role_permissions\" (\"role_code\",\"permission_code\") VALUES (?,?)",
+      "values": [
+        "super_admin",
+        "upload.delete"
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"role_permissions\" (\"role_code\",\"permission_code\") VALUES (?,?)",
+      "values": [
+        "super_admin",
+        "upload.restore"
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"role_permissions\" (\"role_code\",\"permission_code\") VALUES (?,?)",
+      "values": [
+        "super_admin",
+        "mapping.manage"
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"role_permissions\" (\"role_code\",\"permission_code\") VALUES (?,?)",
+      "values": [
+        "super_admin",
+        "dashboard.view"
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"role_permissions\" (\"role_code\",\"permission_code\") VALUES (?,?)",
+      "values": [
+        "super_admin",
+        "export.pdf"
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"role_permissions\" (\"role_code\",\"permission_code\") VALUES (?,?)",
+      "values": [
+        "super_admin",
+        "export.excel"
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"role_permissions\" (\"role_code\",\"permission_code\") VALUES (?,?)",
+      "values": [
+        "super_admin",
+        "kpi.manage"
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"role_permissions\" (\"role_code\",\"permission_code\") VALUES (?,?)",
+      "values": [
+        "super_admin",
+        "audit.view"
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"role_permissions\" (\"role_code\",\"permission_code\") VALUES (?,?)",
+      "values": [
+        "super_admin",
+        "workspace.view_all"
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"role_permissions\" (\"role_code\",\"permission_code\") VALUES (?,?)",
+      "values": [
+        "admin",
+        "user.create"
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"role_permissions\" (\"role_code\",\"permission_code\") VALUES (?,?)",
+      "values": [
+        "admin",
+        "user.update"
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"role_permissions\" (\"role_code\",\"permission_code\") VALUES (?,?)",
+      "values": [
+        "admin",
+        "user.deactivate"
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"role_permissions\" (\"role_code\",\"permission_code\") VALUES (?,?)",
+      "values": [
+        "admin",
+        "upload.create"
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"role_permissions\" (\"role_code\",\"permission_code\") VALUES (?,?)",
+      "values": [
+        "admin",
+        "upload.delete"
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"role_permissions\" (\"role_code\",\"permission_code\") VALUES (?,?)",
+      "values": [
+        "admin",
+        "upload.restore"
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"role_permissions\" (\"role_code\",\"permission_code\") VALUES (?,?)",
+      "values": [
+        "admin",
+        "mapping.manage"
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"role_permissions\" (\"role_code\",\"permission_code\") VALUES (?,?)",
+      "values": [
+        "admin",
+        "dashboard.view"
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"role_permissions\" (\"role_code\",\"permission_code\") VALUES (?,?)",
+      "values": [
+        "admin",
+        "export.pdf"
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"role_permissions\" (\"role_code\",\"permission_code\") VALUES (?,?)",
+      "values": [
+        "admin",
+        "export.excel"
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"role_permissions\" (\"role_code\",\"permission_code\") VALUES (?,?)",
+      "values": [
+        "admin",
+        "kpi.manage"
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"role_permissions\" (\"role_code\",\"permission_code\") VALUES (?,?)",
+      "values": [
+        "admin",
+        "audit.view"
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"role_permissions\" (\"role_code\",\"permission_code\") VALUES (?,?)",
+      "values": [
+        "admin",
+        "workspace.view_all"
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"role_permissions\" (\"role_code\",\"permission_code\") VALUES (?,?)",
+      "values": [
+        "data_manager",
+        "upload.create"
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"role_permissions\" (\"role_code\",\"permission_code\") VALUES (?,?)",
+      "values": [
+        "data_manager",
+        "upload.delete"
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"role_permissions\" (\"role_code\",\"permission_code\") VALUES (?,?)",
+      "values": [
+        "data_manager",
+        "upload.restore"
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"role_permissions\" (\"role_code\",\"permission_code\") VALUES (?,?)",
+      "values": [
+        "data_manager",
+        "mapping.manage"
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"role_permissions\" (\"role_code\",\"permission_code\") VALUES (?,?)",
+      "values": [
+        "data_manager",
+        "dashboard.view"
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"role_permissions\" (\"role_code\",\"permission_code\") VALUES (?,?)",
+      "values": [
+        "data_manager",
+        "export.pdf"
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"role_permissions\" (\"role_code\",\"permission_code\") VALUES (?,?)",
+      "values": [
+        "data_manager",
+        "export.excel"
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"role_permissions\" (\"role_code\",\"permission_code\") VALUES (?,?)",
+      "values": [
+        "analyst",
+        "upload.create"
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"role_permissions\" (\"role_code\",\"permission_code\") VALUES (?,?)",
+      "values": [
+        "analyst",
+        "dashboard.view"
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"role_permissions\" (\"role_code\",\"permission_code\") VALUES (?,?)",
+      "values": [
+        "analyst",
+        "export.pdf"
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"role_permissions\" (\"role_code\",\"permission_code\") VALUES (?,?)",
+      "values": [
+        "analyst",
+        "export.excel"
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"role_permissions\" (\"role_code\",\"permission_code\") VALUES (?,?)",
+      "values": [
+        "manager",
+        "dashboard.view"
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"role_permissions\" (\"role_code\",\"permission_code\") VALUES (?,?)",
+      "values": [
+        "manager",
+        "export.pdf"
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"role_permissions\" (\"role_code\",\"permission_code\") VALUES (?,?)",
+      "values": [
+        "readonly",
+        "dashboard.view"
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"role_permissions\" (\"role_code\",\"permission_code\") VALUES (?,?)",
+      "values": [
+        "viewer",
+        "dashboard.view"
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"role_permissions\" (\"role_code\",\"permission_code\") VALUES (?,?)",
+      "values": [
+        "viewer",
+        "export.pdf"
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"users\" (\"id\",\"email\",\"full_name\",\"role_code\",\"status\",\"last_login_at\",\"force_logout_at\",\"created_at\",\"updated_at\",\"first_name\",\"last_name\",\"password_hash\",\"force_password_change\",\"password_changed_at\",\"failed_login_attempts\",\"locked_until\",\"data_scope\",\"created_by_user_id\",\"archived_at\",\"archived_by_user_id\") VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+      "values": [
+        "usr_1e8eaa3379b5eb4b8f85230e",
+        "zecesoy@ajet.com",
+        "Zeynep Ecesoy",
+        "analyst",
+        "active",
+        1791799872281,
+        null,
+        1791799839589,
+        1791799872281,
+        "Zeynep",
+        "Ecesoy",
+        "$2b$12$dthIi771jbGmtORzBAe0L.CiS9t.HxNi0nmX89CgpmIFcHSPDeqPW",
+        0,
+        null,
+        0,
+        null,
+        "tenant",
+        "usr_f789bd1c-dad3-48f8-b68f-5c2b4bf0ae3d",
+        null,
+        null
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"users\" (\"id\",\"email\",\"full_name\",\"role_code\",\"status\",\"last_login_at\",\"force_logout_at\",\"created_at\",\"updated_at\",\"first_name\",\"last_name\",\"password_hash\",\"force_password_change\",\"password_changed_at\",\"failed_login_attempts\",\"locked_until\",\"data_scope\",\"created_by_user_id\",\"archived_at\",\"archived_by_user_id\") VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+      "values": [
+        "usr_1eef2027d921280d07989567",
+        "mirsat20021@gmail.com",
+        "mirsat adıyaman",
+        "super_admin",
+        "inactive",
+        1787647439088,
+        1791792283181,
+        1785933410733,
+        1791792283181,
+        null,
+        null,
+        "$2b$12$kRtpJA3o0u1xjbzyI8AqJOA9.eTWHr2Bd.NPeVPcNmcUw/E/vbvvq",
+        0,
+        1786524303924,
+        0,
+        null,
+        "own_workspace",
+        null,
+        1791792283181,
+        "usr_f789bd1c-dad3-48f8-b68f-5c2b4bf0ae3d"
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"users\" (\"id\",\"email\",\"full_name\",\"role_code\",\"status\",\"last_login_at\",\"force_logout_at\",\"created_at\",\"updated_at\",\"first_name\",\"last_name\",\"password_hash\",\"force_password_change\",\"password_changed_at\",\"failed_login_attempts\",\"locked_until\",\"data_scope\",\"created_by_user_id\",\"archived_at\",\"archived_by_user_id\") VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+      "values": [
+        "usr_4b2943885b581f0e479198a1",
+        "sites-screenshot-service-noreply@chatgpt.com",
+        "Sites Screenshot Service",
+        "analyst",
+        "inactive",
+        1791792282534,
+        1791792283181,
+        1786301021913,
+        1791792283181,
+        "Sites",
+        "Screenshot Service",
+        null,
+        0,
+        null,
+        0,
+        null,
+        "own_workspace",
+        null,
+        1791792283181,
+        "usr_f789bd1c-dad3-48f8-b68f-5c2b4bf0ae3d"
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"users\" (\"id\",\"email\",\"full_name\",\"role_code\",\"status\",\"last_login_at\",\"force_logout_at\",\"created_at\",\"updated_at\",\"first_name\",\"last_name\",\"password_hash\",\"force_password_change\",\"password_changed_at\",\"failed_login_attempts\",\"locked_until\",\"data_scope\",\"created_by_user_id\",\"archived_at\",\"archived_by_user_id\") VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+      "values": [
+        "usr_f789bd1c-dad3-48f8-b68f-5c2b4bf0ae3d",
+        "madiyaman@ajet.com",
+        "AJet Sistem Yöneticisi",
+        "super_admin",
+        "active",
+        1791793308823,
+        1791792283181,
+        1791792283181,
+        1791793308823,
+        "AJet",
+        "Sistem Yöneticisi",
+        "$2b$12$qzDpTWUftrsMwlKppcyzo.8FdR81j0aGfdn0nGoiZcarmZT.A.PD6",
+        0,
+        1791792283181,
+        0,
+        null,
+        "tenant",
+        "usr_f789bd1c-dad3-48f8-b68f-5c2b4bf0ae3d",
+        null,
+        null
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"workspaces\" (\"id\",\"name\",\"owner_user_id\",\"tenant_id\",\"workspace_type\",\"created_at\") VALUES (?,?,?,?,?,?)",
+      "values": [
+        "wsp_1e8eaa3379b5eb4b8f85230e",
+        "madiyaman@ajet.com",
+        "usr_1e8eaa3379b5eb4b8f85230e",
+        "tnt_591bfe88c880df9685d3e298",
+        "personal",
+        1791799839589
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"workspaces\" (\"id\",\"name\",\"owner_user_id\",\"tenant_id\",\"workspace_type\",\"created_at\") VALUES (?,?,?,?,?,?)",
+      "values": [
+        "wsp_1eef2027d921280d07989567",
+        "mirsat adıyaman Çalışma Alanı",
+        "usr_1eef2027d921280d07989567",
+        "tnt_591bfe88c880df9685d3e298",
+        "personal",
+        1785933410733
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"workspaces\" (\"id\",\"name\",\"owner_user_id\",\"tenant_id\",\"workspace_type\",\"created_at\") VALUES (?,?,?,?,?,?)",
+      "values": [
+        "wsp_4b2943885b581f0e479198a1",
+        "Sites Screenshot Service Çalışma Alanı",
+        "usr_4b2943885b581f0e479198a1",
+        "tnt_c6240ca88eed5b237451d4ce",
+        "personal",
+        1786301021913
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"workspace_members\" (\"workspace_id\",\"user_id\",\"access_level\") VALUES (?,?,?)",
+      "values": [
+        "wsp_1eef2027d921280d07989567",
+        "usr_1eef2027d921280d07989567",
+        "owner"
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"workspace_members\" (\"workspace_id\",\"user_id\",\"access_level\") VALUES (?,?,?)",
+      "values": [
+        "wsp_4b2943885b581f0e479198a1",
+        "usr_4b2943885b581f0e479198a1",
+        "owner"
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"workspace_members\" (\"workspace_id\",\"user_id\",\"access_level\") VALUES (?,?,?)",
+      "values": [
+        "wsp_1eef2027d921280d07989567",
+        "usr_f789bd1c-dad3-48f8-b68f-5c2b4bf0ae3d",
+        "owner"
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"workspace_members\" (\"workspace_id\",\"user_id\",\"access_level\") VALUES (?,?,?)",
+      "values": [
+        "wsp_4b2943885b581f0e479198a1",
+        "usr_f789bd1c-dad3-48f8-b68f-5c2b4bf0ae3d",
+        "owner"
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"workspace_members\" (\"workspace_id\",\"user_id\",\"access_level\") VALUES (?,?,?)",
+      "values": [
+        "wsp_1e8eaa3379b5eb4b8f85230e",
+        "usr_1e8eaa3379b5eb4b8f85230e",
+        "owner"
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"user_preferences\" (\"user_id\",\"default_period\",\"comparison_period\",\"default_provider\",\"default_region\",\"default_country\",\"default_city\",\"default_port\",\"sidebar_collapsed\",\"dashboard_layout\",\"updated_at\") VALUES (?,?,?,?,?,?,?,?,?,?,?)",
+      "values": [
+        "usr_1e8eaa3379b5eb4b8f85230e",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        0,
+        null,
+        1791799839589
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"user_preferences\" (\"user_id\",\"default_period\",\"comparison_period\",\"default_provider\",\"default_region\",\"default_country\",\"default_city\",\"default_port\",\"sidebar_collapsed\",\"dashboard_layout\",\"updated_at\") VALUES (?,?,?,?,?,?,?,?,?,?,?)",
+      "values": [
+        "usr_1eef2027d921280d07989567",
+        "2026-06",
+        "2026-05",
+        "TGS",
+        null,
+        null,
+        null,
+        null,
+        0,
+        null,
+        1785933410733
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"user_preferences\" (\"user_id\",\"default_period\",\"comparison_period\",\"default_provider\",\"default_region\",\"default_country\",\"default_city\",\"default_port\",\"sidebar_collapsed\",\"dashboard_layout\",\"updated_at\") VALUES (?,?,?,?,?,?,?,?,?,?,?)",
+      "values": [
+        "usr_4b2943885b581f0e479198a1",
+        "2026-06",
+        "2026-05",
+        "TGS",
+        null,
+        null,
+        null,
+        null,
+        0,
+        null,
+        1786301021913
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"user_preferences\" (\"user_id\",\"default_period\",\"comparison_period\",\"default_provider\",\"default_region\",\"default_country\",\"default_city\",\"default_port\",\"sidebar_collapsed\",\"dashboard_layout\",\"updated_at\") VALUES (?,?,?,?,?,?,?,?,?,?,?)",
+      "values": [
+        "usr_f789bd1c-dad3-48f8-b68f-5c2b4bf0ae3d",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        0,
+        null,
+        1791792283181
+      ]
+    },
+    {
+      "sql": "INSERT INTO \"maintenance_operations\" (\"id\",\"completed_at\",\"actor_user_id\") VALUES (?,?,?)",
+      "values": [
+        "ajet-account-reset-v1",
+        1791792283181,
+        "usr_f789bd1c-dad3-48f8-b68f-5c2b4bf0ae3d"
+      ]
+    }
+  ],
+  "counts": {
+    "roles": 7,
+    "permissions": 13,
+    "role_permissions": 42,
+    "users": 4,
+    "workspaces": 3,
+    "workspace_members": 5,
+    "user_preferences": 4,
+    "maintenance_operations": 1
+  }
+}

@@ -1,0 +1,12 @@
+AJet TGS İstasyon Performans Dashboard — Sürüm 25 + kullanıcı aktarım paketi
+Temel kaynak commit: 0688025727a91db20477d6fa73786982d32f0b57
+Bu ZIP, kaynak koduna ek olarak özel kullanıcı yedeği ve bir defalık aktarım komutu içerir.
+Yedek, dışa aktarım anındaki 4 hesabı (2 aktif), 3 çalışma alanını, rolleri, üyelikleri ve tercihleri korur.
+Parolalar plaintext değildir; mevcut bcrypt hash'leri değiştirilmeden taşınır. Aktif/pasif durumlar korunur.
+Oturumlar, API anahtarları, bakım secret'ları, node_modules ve yerel test veritabanları pakete dahil değildir.
+Yerel kurulum: npm run install:ci → npm run build → npm run accounts:restore → npm run dev.
+9 aktarım kontrolü geçti; aynı yönetici şifresiyle gerçek giriş yolu doğrulandı.
+Git başka kurulumun veritabanını otomatik oluşturmaz. KULLANICI-AKTARIMI.md dosyasını okuyun.
+private-transfer/ özel yedektir ve Git dışında tutulur. Herkese açık depoya yüklemeyin.
+Performans kayıtları ve kullanıcı tarafından yüklenmiş Excel dosyaları bu hesap yedeğinde yoktur.
+Üretim veritabanı değiştirilmedi. Yeni canlı hosting hedefi verilmediğinden uzak kurulum yapılmadı.

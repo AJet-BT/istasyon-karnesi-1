@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "checks": [
+    "exact-user-and-scope-retention",
+    "password-hash-retention",
+    "no-imported-sessions",
+    "actual-password-login",
+    "administrator-workspace-access",
+    "archived-login-rejected",
+    "repeat-import-rejected",
+    "batch-failure-rollback",
+    "portable-sql-backup"
+  ],
+  "accounts": 4
+}

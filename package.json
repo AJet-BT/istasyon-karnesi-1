@@ -1,0 +1,56 @@
+{
+  "name": "ajet-tgs-istasyon-performans",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "install:ci": "node scripts/portable-install.mjs",
+    "dev": "node scripts/portable-command.mjs dev",
+    "build": "node scripts/portable-build.mjs",
+    "start": "node scripts/portable-command.mjs start",
+    "test": "node scripts/portable-test.mjs",
+    "regression": "node scripts/portable-regression.mjs",
+    "validate:artifact": "node scripts/portable-validate-artifact.mjs",
+    "lint": "node scripts/portable-command.mjs lint",
+    "typecheck": "node scripts/portable-command.mjs typecheck",
+    "db:generate": "node scripts/portable-command.mjs db:generate",
+    "accounts:restore": "node scripts/restore-accounts.mjs"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "drizzle-orm": "0.45.2",
+    "lucide-react": "^0.468.0",
+    "next": "16.2.11",
+    "react": "19.2.6",
+    "react-dom": "19.2.6",
+    "recharts": "^2.15.4",
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz"
+  },
+  "devDependencies": {
+    "@cloudflare/vite-plugin": "1.37.1",
+    "@tailwindcss/postcss": "4.2.1",
+    "@types/node": "22.19.19",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "6.0.2",
+    "@vitejs/plugin-rsc": "0.5.26",
+    "drizzle-kit": "0.31.10",
+    "eslint": "9.39.4",
+    "eslint-config-next": "16.2.11",
+    "react-server-dom-webpack": "19.2.6",
+    "tailwindcss": "4.2.1",
+    "typescript": "5.9.3",
+    "vinext": "0.0.50",
+    "vite": "8.0.13",
+    "wrangler": "4.92.0"
+  },
+  "overrides": {
+    "nanoid": "3.3.18",
+    "postcss": "8.5.23",
+    "sharp": "0.35.0"
+  },
+  "type": "module",
+  "displayName": "AJet TGS İstasyon Performans Dashboard"
+}

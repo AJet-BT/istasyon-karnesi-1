@@ -1,0 +1,1070 @@
+{
+  "format": "ajet-private-github-transfer-v1",
+  "preparedAt": "2026-10-12",
+  "targetOwner": "AJet-BT",
+  "targetRepository": "istasyon-karnesi-1",
+  "requiredVisibility": "private",
+  "originalArchive": "Istasyon-karnesi-1.zip",
+  "originalArchiveSha256": "7310780313772050c43acff0b87024b60b8c04d9c3eff1fa1523cc31e2b89448",
+  "originalRoot": "AJet-TGS-Dashboard/",
+  "originalFileCount": 145,
+  "originalDirectories": [
+    {
+      "originalPath": "AJet-TGS-Dashboard/.openai/",
+      "repositoryPath": ".openai/"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/.vinext/",
+      "repositoryPath": ".vinext/"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/.vinext/fonts/",
+      "repositoryPath": ".vinext/fonts/"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/.vinext/fonts/geist-8ac0455e797f/",
+      "repositoryPath": ".vinext/fonts/geist-8ac0455e797f/"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/.vinext/fonts/geist-mono-00e989178794/",
+      "repositoryPath": ".vinext/fonts/geist-mono-00e989178794/"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/app/",
+      "repositoryPath": "app/"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/app/api/",
+      "repositoryPath": "app/api/"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/app/api/admin/",
+      "repositoryPath": "app/api/admin/"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/app/api/admin/ports/",
+      "repositoryPath": "app/api/admin/ports/"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/app/api/admin/ports/resolve/",
+      "repositoryPath": "app/api/admin/ports/resolve/"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/app/api/admin/ports/[id]/",
+      "repositoryPath": "app/api/admin/ports/[id]/"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/app/api/admin/users/",
+      "repositoryPath": "app/api/admin/users/"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/app/api/admin/users/[id]/",
+      "repositoryPath": "app/api/admin/users/[id]/"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/app/api/admin/users/[id]/reset-password/",
+      "repositoryPath": "app/api/admin/users/[id]/reset-password/"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/app/api/admin/users/[id]/revoke-sessions/",
+      "repositoryPath": "app/api/admin/users/[id]/revoke-sessions/"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/app/api/admin/users/[id]/role/",
+      "repositoryPath": "app/api/admin/users/[id]/role/"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/app/api/admin/users/[id]/status/",
+      "repositoryPath": "app/api/admin/users/[id]/status/"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/app/api/auth/",
+      "repositoryPath": "app/api/auth/"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/app/api/auth/change-password/",
+      "repositoryPath": "app/api/auth/change-password/"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/app/api/auth/login/",
+      "repositoryPath": "app/api/auth/login/"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/app/api/auth/logout/",
+      "repositoryPath": "app/api/auth/logout/"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/app/api/maintenance/",
+      "repositoryPath": "app/api/maintenance/"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/app/api/maintenance/account-reset/",
+      "repositoryPath": "app/api/maintenance/account-reset/"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/app/api/platform/",
+      "repositoryPath": "app/api/platform/"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/app/change-password/",
+      "repositoryPath": "app/change-password/"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/app/login/",
+      "repositoryPath": "app/login/"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/build/",
+      "repositoryPath": "build/"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/db/",
+      "repositoryPath": "db/"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/drizzle/",
+      "repositoryPath": "drizzle/"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/drizzle/meta/",
+      "repositoryPath": "drizzle/meta/"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/examples/",
+      "repositoryPath": "examples/"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/examples/d1/",
+      "repositoryPath": "examples/d1/"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/examples/d1/app/",
+      "repositoryPath": "examples/d1/app/"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/examples/d1/app/api/",
+      "repositoryPath": "examples/d1/app/api/"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/examples/d1/app/api/notes/",
+      "repositoryPath": "examples/d1/app/api/notes/"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/examples/d1/db/",
+      "repositoryPath": "examples/d1/db/"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/lib/",
+      "repositoryPath": "lib/"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/lib/server/",
+      "repositoryPath": "lib/server/"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/private-transfer/",
+      "repositoryPath": "private-transfer/"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/public/",
+      "repositoryPath": "public/"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/public/mock-data/",
+      "repositoryPath": "public/mock-data/"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/scripts/",
+      "repositoryPath": "scripts/"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/tests/",
+      "repositoryPath": "tests/"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/worker/",
+      "repositoryPath": "worker/"
+    }
+  ],
+  "allOriginalFilesPreserved": true,
+  "files": [
+    {
+      "originalPath": "AJet-TGS-Dashboard/.env.example",
+      "repositoryPath": ".env.example",
+      "bytes": 218,
+      "sha256": "09e601754798ee42e4d78519542149860234f3d23ae77a04b4f795523c6b1226"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/.gitignore",
+      "repositoryPath": ".gitignore",
+      "bytes": 695,
+      "sha256": "9b514d07cb35c520ce73f796f10f3adeb96f3e732b58a6ea6901007ee4a3692a"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/.npmrc",
+      "repositoryPath": ".npmrc",
+      "bytes": 80,
+      "sha256": "3638c4dc051cd1c42f02abe518f3d57a7cb0e302dcabd0601a787d25a2aabfbc"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/.openai/hosting.json",
+      "repositoryPath": ".openai/hosting.json",
+      "bytes": 100,
+      "sha256": "1e643d35b57968a5e38437a8c377ca38548c4251a08b23c80f21d6ac4fe167fc"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/.vinext/fonts/geist-8ac0455e797f/geist-001175b1.woff2",
+      "repositoryPath": ".vinext/fonts/geist-8ac0455e797f/geist-001175b1.woff2",
+      "bytes": 16540,
+      "sha256": "58a6b173d5ca1dec92166ea3c6cb1a84a4144556d10928ac14e8e6b40e4787bd"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/.vinext/fonts/geist-8ac0455e797f/geist-52306abf.woff2",
+      "repositoryPath": ".vinext/fonts/geist-8ac0455e797f/geist-52306abf.woff2",
+      "bytes": 7968,
+      "sha256": "f689f638f29fff460a2d5749edb5d5c38d7bef0389f32032d871f23fc6ebb008"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/.vinext/fonts/geist-8ac0455e797f/geist-875ccdd4.woff2",
+      "repositoryPath": ".vinext/fonts/geist-8ac0455e797f/geist-875ccdd4.woff2",
+      "bytes": 14900,
+      "sha256": "6129fc8571c3e0cb0a4c41f5160c974a843b055009dc4ad8858bd808e18a2d86"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/.vinext/fonts/geist-8ac0455e797f/geist-98bbbccb.woff2",
+      "repositoryPath": ".vinext/fonts/geist-8ac0455e797f/geist-98bbbccb.woff2",
+      "bytes": 29288,
+      "sha256": "9b6f5ff45b278c744b5f379a2c4ecbaf858a842b8eaf82ac8d21b699ca16c608"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/.vinext/fonts/geist-8ac0455e797f/geist-ff2310f5.woff2",
+      "repositoryPath": ".vinext/fonts/geist-8ac0455e797f/geist-ff2310f5.woff2",
+      "bytes": 7252,
+      "sha256": "b7a545bbb08256bd809f11cfe66d88da3e22d169ea4407737b1ef0ec1ed3d791"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/.vinext/fonts/geist-8ac0455e797f/style.css",
+      "repositoryPath": ".vinext/fonts/geist-8ac0455e797f/style.css",
+      "bytes": 2039,
+      "sha256": "7cee1bf5fab3796b84df07b29b9c98cf9f4ea59dce7d05b9e7a1bdd3b71e158a"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/.vinext/fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2",
+      "repositoryPath": ".vinext/fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2",
+      "bytes": 23108,
+      "sha256": "5f3d6ad60f29d6cb708414ec6887163d63bf197377ef5417d2483ff31ace6c3b"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/.vinext/fonts/geist-mono-00e989178794/geist-mono-0638449e.woff2",
+      "repositoryPath": ".vinext/fonts/geist-mono-00e989178794/geist-mono-0638449e.woff2",
+      "bytes": 5892,
+      "sha256": "d67e4a94ba498635f764ddca7d1ec4271f5642f032eb24b426764480f66f8497"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/.vinext/fonts/geist-mono-00e989178794/geist-mono-44745446.woff2",
+      "repositoryPath": ".vinext/fonts/geist-mono-00e989178794/geist-mono-44745446.woff2",
+      "bytes": 14712,
+      "sha256": "745994b5cd950ec201b66526375f057d540847cccfc70f4f24f5f571d26d3923"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/.vinext/fonts/geist-mono-00e989178794/geist-mono-44e03052.woff2",
+      "repositoryPath": ".vinext/fonts/geist-mono-00e989178794/geist-mono-44e03052.woff2",
+      "bytes": 12872,
+      "sha256": "75b3bedbebc35f347c0ae3b416aa871941555357e7b0f83767eb5987875589ed"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/.vinext/fonts/geist-mono-00e989178794/geist-mono-971fb274.woff2",
+      "repositoryPath": ".vinext/fonts/geist-mono-00e989178794/geist-mono-971fb274.woff2",
+      "bytes": 7728,
+      "sha256": "16e1d48b6dd29eb240aec5db36184eb182933c082cd43de7f35af686d58087d2"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/.vinext/fonts/geist-mono-00e989178794/geist-mono-f6b33328.woff2",
+      "repositoryPath": ".vinext/fonts/geist-mono-00e989178794/geist-mono-f6b33328.woff2",
+      "bytes": 6204,
+      "sha256": "e27f657e38d52887baa3b6b2f812bef93dfdd356f0810e40edd4ee284cc7e9f6"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/.vinext/fonts/geist-mono-00e989178794/style.css",
+      "repositoryPath": ".vinext/fonts/geist-mono-00e989178794/style.css",
+      "bytes": 2466,
+      "sha256": "5970590407d2dac2b3c8d92f7d740dea9bea6c99f96ec6fe9ae8fe0645e3a118"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/AKTARIM-DOGRULAMASI.json",
+      "repositoryPath": "AKTARIM-DOGRULAMASI.json",
+      "bytes": 337,
+      "sha256": "7d0de3a73b27522c78a0085ba2dd28786c12311e441a43167184282789836515"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/app/admin-panel.tsx",
+      "repositoryPath": "app/admin-panel.tsx",
+      "bytes": 28252,
+      "sha256": "9b6308e81810b7847158ae1cdaef299c23ead377de5ea35815b9deceac548f7c"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/app/api/admin/ports/resolve/route.ts",
+      "repositoryPath": "app/api/admin/ports/resolve/route.ts",
+      "bytes": 392,
+      "sha256": "751b5f28d7ab7398701c1a64ea874d5bb11b98071a90fe0dbea8d98f7e48fd77"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/app/api/admin/ports/route.ts",
+      "repositoryPath": "app/api/admin/ports/route.ts",
+      "bytes": 594,
+      "sha256": "1f8d128547bb8589c24af863d0e5c9493a4afe5ac22ca62befef218174cdb467"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/app/api/admin/ports/[id]/route.ts",
+      "repositoryPath": "app/api/admin/ports/[id]/route.ts",
+      "bytes": 475,
+      "sha256": "6e6a0727aa631e2071a9401f03258c2d3eea592d3d7fd9f3204a4a3b562f4e73"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/app/api/admin/users/route.ts",
+      "repositoryPath": "app/api/admin/users/route.ts",
+      "bytes": 890,
+      "sha256": "2a7400b8b3200667c36ef8b4abc04beda40f1936f342c9b295cb34b9ce5945ae"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/app/api/admin/users/[id]/reset-password/route.ts",
+      "repositoryPath": "app/api/admin/users/[id]/reset-password/route.ts",
+      "bytes": 501,
+      "sha256": "0593b9fba4dc1db31e701c55f60e7651cce15df4380ce0c43e9dc896b3a89fc3"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/app/api/admin/users/[id]/revoke-sessions/route.ts",
+      "repositoryPath": "app/api/admin/users/[id]/revoke-sessions/route.ts",
+      "bytes": 481,
+      "sha256": "03ed309968737e10fd872ccc95910db2e7afc5049126d3896b8c1363b8308123"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/app/api/admin/users/[id]/role/route.ts",
+      "repositoryPath": "app/api/admin/users/[id]/role/route.ts",
+      "bytes": 543,
+      "sha256": "df65cd59a19792f17c485ee1e847356631638ba03ba6bc61d8048905f3ba15a8"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/app/api/admin/users/[id]/route.ts",
+      "repositoryPath": "app/api/admin/users/[id]/route.ts",
+      "bytes": 996,
+      "sha256": "c9c26a6d11e438575990e6f47826ac9daafd5b290bb8475d25da72b628d09cd5"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/app/api/admin/users/[id]/status/route.ts",
+      "repositoryPath": "app/api/admin/users/[id]/status/route.ts",
+      "bytes": 543,
+      "sha256": "50ecc6a7517c5d0b251df09a2c128d1b1181b406c8359e29a70b6e6cc9745db5"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/app/api/admin/_helpers.ts",
+      "repositoryPath": "app/api/admin/_helpers.ts",
+      "bytes": 899,
+      "sha256": "831ae9d053427b591dfb237835a5fc9b67780a3b1b13ee781bcd15b8623aeb1f"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/app/api/auth/change-password/route.ts",
+      "repositoryPath": "app/api/auth/change-password/route.ts",
+      "bytes": 2137,
+      "sha256": "6b09b3457038953e1849623a030fee0c8240c9e138a19d1afef46aedc482e955"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/app/api/auth/login/route.ts",
+      "repositoryPath": "app/api/auth/login/route.ts",
+      "bytes": 3000,
+      "sha256": "583359bb9d353a9e95908ffce81347c8e40a825e60c4a278ba928420c1176deb"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/app/api/auth/logout/route.ts",
+      "repositoryPath": "app/api/auth/logout/route.ts",
+      "bytes": 694,
+      "sha256": "1fef960dfd059c9d84ec421795636a5e246df1af7c6d8ea05df3c160de928bb3"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/app/api/maintenance/account-reset/route.ts",
+      "repositoryPath": "app/api/maintenance/account-reset/route.ts",
+      "bytes": 654,
+      "sha256": "96640ee593a00974fd135655a479d8d3880b222cb8a6c19f7797f40f383cbb4a"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/app/api/platform/route.ts",
+      "repositoryPath": "app/api/platform/route.ts",
+      "bytes": 6667,
+      "sha256": "22ba93ac714455c74b3362f73e301798366a70821838b99226b7f4c95311c015"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/app/auth-form.tsx",
+      "repositoryPath": "app/auth-form.tsx",
+      "bytes": 5525,
+      "sha256": "71342adcb822fc0c376f50473fe12dfe77dfb6f76fe4a7265dbf050d8695426f"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/app/change-password/page.tsx",
+      "repositoryPath": "app/change-password/page.tsx",
+      "bytes": 130,
+      "sha256": "be17c064d2d7d4bbed39d9598410b3f8874e4126d9a9072245972023df46105f"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/app/chatgpt-auth.ts",
+      "repositoryPath": "app/chatgpt-auth.ts",
+      "bytes": 2490,
+      "sha256": "1407f614cc83d7049fdb08cd713d2516866ba58e24e820f7f4fd9d718b9d3007"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/app/dashboard-compact.css",
+      "repositoryPath": "app/dashboard-compact.css",
+      "bytes": 10193,
+      "sha256": "908b036a35b14c24d9814182898dc0530393c66c055b58f508ace2623cf1ffde"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/app/dataset-upload.tsx",
+      "repositoryPath": "app/dataset-upload.tsx",
+      "bytes": 13806,
+      "sha256": "4fc889d0aa2d0834e59a7ce80a98ec6aac0dea773ac8ca74eb3113d690fcd506"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/app/globals.css",
+      "repositoryPath": "app/globals.css",
+      "bytes": 118998,
+      "sha256": "0b60c13b215b59baea895ebdd501e6489dfaaa5e115b7c9b8ff4a28195d47f64"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/app/layout.tsx",
+      "repositoryPath": "app/layout.tsx",
+      "bytes": 906,
+      "sha256": "14229555df7d193fe7f4d23777f09343faa8cc5944394687d32613fb0a1e525f"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/app/login/page.tsx",
+      "repositoryPath": "app/login/page.tsx",
+      "bytes": 120,
+      "sha256": "31befef2421d740a1a7d4a4df79714837872c1e076cf026fe58e7e29d6a0f092"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/app/overview-trend.tsx",
+      "repositoryPath": "app/overview-trend.tsx",
+      "bytes": 5159,
+      "sha256": "73bdb471a47288a7d2e5a9b635902a5a336f463ee969ec63fe8769fe5f8b30ca"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/app/page.tsx",
+      "repositoryPath": "app/page.tsx",
+      "bytes": 155943,
+      "sha256": "3516bda50f12de91ed72240414269821073472b63e6fedb01c897be89202feb5"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/app/performance-report.tsx",
+      "repositoryPath": "app/performance-report.tsx",
+      "bytes": 19854,
+      "sha256": "e2730b6e453fcff53279aa04becb7545575cfbf56d82235c5be9c76476da9e5f"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/app/port-master.tsx",
+      "repositoryPath": "app/port-master.tsx",
+      "bytes": 11493,
+      "sha256": "857ed745e4517f6c7ee81c90b95f698a3cf11aefda9212feecb19b71588c33a9"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/app/visualization-engine.tsx",
+      "repositoryPath": "app/visualization-engine.tsx",
+      "bytes": 20877,
+      "sha256": "3eb376be9061c1ff9470a29ecf30ddf32907d74cbc9928cc4ac451b6ad6ac2df"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/build/sites-vite-plugin.ts",
+      "repositoryPath": "build/sites-vite-plugin.ts",
+      "bytes": 1299,
+      "sha256": "abd6bc3a592961e978ab72fceb8ee7647824d9a2321ee5b5777b2a05d69526cc"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/db/index.ts",
+      "repositoryPath": "db/index.ts",
+      "bytes": 499,
+      "sha256": "1cb2dca3db75bd1c4f0f221de557f26c74ce297e60c0fa0c036a310fd8525bb8"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/db/schema.ts",
+      "repositoryPath": "db/schema.ts",
+      "bytes": 12070,
+      "sha256": "62288ec42ffd4c53ab7c3f6dd9006676b9cfdf311428acda7e76578ca2d1ae1a"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/drizzle/0000_jazzy_the_spike.sql",
+      "repositoryPath": "drizzle/0000_jazzy_the_spike.sql",
+      "bytes": 6426,
+      "sha256": "7e204377cdbedb8b816e4c5b6f45e07516eab63862b5dbbf5fb5f2340533d228"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/drizzle/0001_wealthy_ben_parker.sql",
+      "repositoryPath": "drizzle/0001_wealthy_ben_parker.sql",
+      "bytes": 1689,
+      "sha256": "73be16eddda9e10987b0c85f598d460d881e63e8880117dee4ed7e042bc5f0c6"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/drizzle/0002_hesitant_madame_web.sql",
+      "repositoryPath": "drizzle/0002_hesitant_madame_web.sql",
+      "bytes": 2506,
+      "sha256": "ba0c70d7e8fea8ef4be4e71538232aeddf992702da8d6064d65b6dd30e9b2c04"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/drizzle/0003_parallel_dragon_lord.sql",
+      "repositoryPath": "drizzle/0003_parallel_dragon_lord.sql",
+      "bytes": 51,
+      "sha256": "dd5053c0163393f06095fd5e95296894b7d6d44415ab773e19beb2fee2bac1ea"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/drizzle/0004_foamy_mentor.sql",
+      "repositoryPath": "drizzle/0004_foamy_mentor.sql",
+      "bytes": 3281,
+      "sha256": "85603e2f75871c4b2c7c44b71007357f06382cbaae411e3aa71d0a99e56bd7c4"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/drizzle/meta/0000_snapshot.json",
+      "repositoryPath": "drizzle/meta/0000_snapshot.json",
+      "bytes": 33520,
+      "sha256": "0fcf523e8cdf4b4f345dbfb3627947a72e6ee6f84fc6784b90d4ccfb1861cb5f"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/drizzle/meta/0001_snapshot.json",
+      "repositoryPath": "drizzle/meta/0001_snapshot.json",
+      "bytes": 39406,
+      "sha256": "9240cff387f0fb6cee59a5f7d2a88c34980b46b37cad5604baf960a396202d6d"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/drizzle/meta/0002_snapshot.json",
+      "repositoryPath": "drizzle/meta/0002_snapshot.json",
+      "bytes": 48454,
+      "sha256": "db06916cdad43d644f5d0d5b33d3889b2d4554ed72345ef7f579fbf15b4e9758"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/drizzle/meta/0003_snapshot.json",
+      "repositoryPath": "drizzle/meta/0003_snapshot.json",
+      "bytes": 48649,
+      "sha256": "8cbfb7fd79b2ab4f8f92aa47a06696bc2d73d1dcda9642a41b400cfcce585139"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/drizzle/meta/0004_snapshot.json",
+      "repositoryPath": "drizzle/meta/0004_snapshot.json",
+      "bytes": 50710,
+      "sha256": "08c4bf0d106a528902152d84009753f9c8539b1c969acce446622cdec0f18cd6"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/drizzle/meta/_journal.json",
+      "repositoryPath": "drizzle/meta/_journal.json",
+      "bytes": 826,
+      "sha256": "18e959f9a9946132299a00dea46744e3e16002a9c5d6825d832c5f22b3322be1"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/drizzle.config.ts",
+      "repositoryPath": "drizzle.config.ts",
+      "bytes": 155,
+      "sha256": "73d0807c58e541dc3eaf175909fb5acc966faed61f74ff659d9d55027bf3e25b"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/eslint.config.mjs",
+      "repositoryPath": "eslint.config.mjs",
+      "bytes": 483,
+      "sha256": "275a07c13fc7c83a652efcfa9fb6a207c451a2f5088e6793415ce44281285720"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/examples/d1/app/api/notes/route.ts",
+      "repositoryPath": "examples/d1/app/api/notes/route.ts",
+      "bytes": 1758,
+      "sha256": "b0b134b9b0b4a9f5947abbd13fd4425b88b59c64f91db1aacb0cecbc16c38f45"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/examples/d1/db/schema.ts",
+      "repositoryPath": "examples/d1/db/schema.ts",
+      "bytes": 379,
+      "sha256": "1acd70317bcaf22cb140436fb47754c2144e7c2adfc59a3f427ecb1d816fa0f3"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/KULLANICI-AKTARIMI.md",
+      "repositoryPath": "KULLANICI-AKTARIMI.md",
+      "bytes": 3793,
+      "sha256": "69b65c0e965c320ce9fb603289ab7fb65b2996657959f19cb3ea9ba3d46b1398"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/lib/corporate-language.ts",
+      "repositoryPath": "lib/corporate-language.ts",
+      "bytes": 6910,
+      "sha256": "7ae7c96f6e9c7713e3f81a514a25ab93b3b0a1f78c76d16fa2ad6b9a8df86de2"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/lib/overview-trend.ts",
+      "repositoryPath": "lib/overview-trend.ts",
+      "bytes": 2023,
+      "sha256": "3a71d8cb78b6fa784ee43c99a80deb8f51b9a6ff9e01ed7592176f035e36933d"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/lib/performance-metrics.ts",
+      "repositoryPath": "lib/performance-metrics.ts",
+      "bytes": 9023,
+      "sha256": "3f4f3a020be89881a3270aba44c9027d2eb594ed56cc576413345b30c38d40e9"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/lib/server/account-reset.ts",
+      "repositoryPath": "lib/server/account-reset.ts",
+      "bytes": 6316,
+      "sha256": "a261f2c2cf0c98ee21d6c9f89c5a99092a734cd15e68aac6886e7f402c42d99d"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/lib/server/admin.ts",
+      "repositoryPath": "lib/server/admin.ts",
+      "bytes": 15844,
+      "sha256": "9b8064466fea8ebc0c45c153aa161b4a6d91e114d08239a810fdd84cb0497777"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/lib/server/auth.ts",
+      "repositoryPath": "lib/server/auth.ts",
+      "bytes": 8439,
+      "sha256": "525f9ba2a104cdebca6024e0de6ceacba88a5af3202f87e6cf8076d91a7bf692"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/lib/server/errors.ts",
+      "repositoryPath": "lib/server/errors.ts",
+      "bytes": 128,
+      "sha256": "89ab8fc18fdc321a44697b2309e656f179b36409c093a2e96af4a9a52c344b44"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/lib/server/platform.ts",
+      "repositoryPath": "lib/server/platform.ts",
+      "bytes": 55869,
+      "sha256": "642968972441c59d397a98d6c0dd2002b9e5b9cbbd691b1196a6063c0f3be60d"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/lib/server/ports.ts",
+      "repositoryPath": "lib/server/ports.ts",
+      "bytes": 10187,
+      "sha256": "2e6cc7d622b2d3b5ba296b317537a544d1b961d02379ff045df49dc4bc1c7fb2"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/lib/server/runtime-bindings.ts",
+      "repositoryPath": "lib/server/runtime-bindings.ts",
+      "bytes": 911,
+      "sha256": "1c9fddb58cffbbd164998b75880f45eb81bc77474a36e1f2d64622a14a763f4f"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/lib/visualization-engine.ts",
+      "repositoryPath": "lib/visualization-engine.ts",
+      "bytes": 11611,
+      "sha256": "800a8a63d7ac78b9f749a6ff948d61b6a5c4b5fc63cfb73928d7c92b09eb8ee0"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/lib/workbook-import.ts",
+      "repositoryPath": "lib/workbook-import.ts",
+      "bytes": 20658,
+      "sha256": "812e065ff35db2a006b9bb68c2fbfe6610ddb49f7e45a4e547449a1a4ebeb719"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/next.config.ts",
+      "repositoryPath": "next.config.ts",
+      "bytes": 138,
+      "sha256": "1755c5c50062378ad072ec6d09303399eb90a7e050725571fde3acd873c2ce9e"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/package-lock.json",
+      "repositoryPath": "package-lock.json",
+      "bytes": 405186,
+      "sha256": "842debe779661eb6a12219d2fcc0e2249693fdbe0e961b5f0d14093fc8635115"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/package.json",
+      "repositoryPath": "package.json",
+      "bytes": 1768,
+      "sha256": "77407c167a258f69600b2ac239f01f001019c6983c2408c1c80e1b9522bf2ab5"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/PAKET-BILGISI.txt",
+      "repositoryPath": "PAKET-BILGISI.txt",
+      "bytes": 1195,
+      "sha256": "041c3b6d6ccec75bb1a770facb39caaa0872e0e2680063e7dcca242838ecefef"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/postcss.config.mjs",
+      "repositoryPath": "postcss.config.mjs",
+      "bytes": 101,
+      "sha256": "7b299d3d3b16699ddda397c0b2373b3af4f25f8fc9ccc9b3d9e64ef083bc1c21"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/private-transfer/accounts-new-database.sql",
+      "repositoryPath": "private-transfer/accounts-new-database.sql",
+      "bytes": 20877,
+      "sha256": "0c7d2779c0dc88b387a1fba2183dc7dfa02184ee9cc3cc011c34a1ff84a7b9a5"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/private-transfer/accounts.json",
+      "repositoryPath": "private-transfer/accounts.json",
+      "bytes": 30159,
+      "sha256": "e8f24a0041ef60715360fb63ffd15aa9d600244333c72fd77f1c5fd7394979c2"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/public/ajet-logo-original.png",
+      "repositoryPath": "public/ajet-logo-original.png",
+      "bytes": 37085,
+      "sha256": "81a6c7297811e84c83b9deced09ea840cd31e38c6a2d40c34e484738d78a52c5"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/public/ajet-logo.png",
+      "repositoryPath": "public/ajet-logo.png",
+      "bytes": 27353,
+      "sha256": "a9c53c1d78a0631270063d52c2923d8c938e05085eb9160f3756a6011c2d0c95"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/public/favicon.svg",
+      "repositoryPath": "public/favicon.svg",
+      "bytes": 718,
+      "sha256": "3e8863288c2d43dd33d2a71de317dcf9198f09932ea8d61e0def1b846a865435"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/public/file.svg",
+      "repositoryPath": "public/file.svg",
+      "bytes": 393,
+      "sha256": "81a9ce5ca9bc60870c1d72c0fd5b98b2bc5c8c02b0e04fefeab9efcc11277228"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/public/globe.svg",
+      "repositoryPath": "public/globe.svg",
+      "bytes": 1037,
+      "sha256": "13187c071b4d369df3a7a179f69a927165bf624e1a524ee6c93b7d3be75d6fc8"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/public/mock-data/AJet_TGS_2025-07_test_mock.xlsx",
+      "repositoryPath": "public/mock-data/AJet_TGS_2025-07_test_mock.xlsx",
+      "bytes": 5022,
+      "sha256": "68ce5d9be2fef77f3d8c5e99dd0d59e3a50eb07f634a7abe5653759638470995"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/public/mock-data/AJet_TGS_2025-08_test_mock.xlsx",
+      "repositoryPath": "public/mock-data/AJet_TGS_2025-08_test_mock.xlsx",
+      "bytes": 5035,
+      "sha256": "1611cfd7e7886f2203c17dd5650fdbe4a026e32d7b938dfb6c837d6393e66ae7"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/public/mock-data/AJet_TGS_2025-09_test_mock.xlsx",
+      "repositoryPath": "public/mock-data/AJet_TGS_2025-09_test_mock.xlsx",
+      "bytes": 5029,
+      "sha256": "f08adef4a16a5ce7c6eca38e01513fc75527bf98a0f2445a7ff3ba94bbc3e987"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/public/mock-data/AJet_TGS_2025-10_test_mock.xlsx",
+      "repositoryPath": "public/mock-data/AJet_TGS_2025-10_test_mock.xlsx",
+      "bytes": 5007,
+      "sha256": "cfac645c8aba7ea07e310b45b61e328eb9cc7285fd2fa5f2aee8e65404f5f68a"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/public/mock-data/AJet_TGS_2025-11_test_mock.xlsx",
+      "repositoryPath": "public/mock-data/AJet_TGS_2025-11_test_mock.xlsx",
+      "bytes": 5012,
+      "sha256": "398adfe9ca69fb60517b7248da731957401e0cb30f5eb4beb365381484ce12cc"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/public/mock-data/AJet_TGS_2025-12_test_mock.xlsx",
+      "repositoryPath": "public/mock-data/AJet_TGS_2025-12_test_mock.xlsx",
+      "bytes": 5027,
+      "sha256": "b9e07675bbd919cf8fba98557503b3b35aff3a63c27878ddc4ff249d915b4320"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/public/mock-data/AJet_TGS_2026-01_test_mock.xlsx",
+      "repositoryPath": "public/mock-data/AJet_TGS_2026-01_test_mock.xlsx",
+      "bytes": 5020,
+      "sha256": "9242308bdc244ff5aa84dfa3b04baae28d0384b0348473683fdc760b2e8efb92"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/public/mock-data/AJet_TGS_2026-02_test_mock.xlsx",
+      "repositoryPath": "public/mock-data/AJet_TGS_2026-02_test_mock.xlsx",
+      "bytes": 5028,
+      "sha256": "31f54482f64d6bd96ec935d34e65591ee41eae63a4d3aba39b420ef505d3c70a"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/public/mock-data/AJet_TGS_2026-03_test_mock.xlsx",
+      "repositoryPath": "public/mock-data/AJet_TGS_2026-03_test_mock.xlsx",
+      "bytes": 5008,
+      "sha256": "21ee639304cc103f22d5beed112e0c0d21fabc947bb384f2214ea786f1de5b89"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/public/mock-data/AJet_TGS_2026-04_test_mock.xlsx",
+      "repositoryPath": "public/mock-data/AJet_TGS_2026-04_test_mock.xlsx",
+      "bytes": 4993,
+      "sha256": "73763be48c70fc06a21452e478c5575eaf335a09c8647075148d6ab737474fbb"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/public/mock-data/AJet_TGS_2026-05_test_mock.xlsx",
+      "repositoryPath": "public/mock-data/AJet_TGS_2026-05_test_mock.xlsx",
+      "bytes": 5003,
+      "sha256": "f36bb53f9a2d1dc9948091c3b0d87f5b5194c2bcf476ddf21a81b4715ec767a2"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/public/mock-data/AJet_TGS_2026-06_test_mock.xlsx",
+      "repositoryPath": "public/mock-data/AJet_TGS_2026-06_test_mock.xlsx",
+      "bytes": 5015,
+      "sha256": "ca6db8504c326d3d7ef57babe2a6126366344564e7b99a1a85557d9b1a1b553c"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/public/source-spreadsheet.png",
+      "repositoryPath": "public/source-spreadsheet.png",
+      "bytes": 200506,
+      "sha256": "074ea38f5f4dbf65d69aa5bfa8daa3585e6526767103838e9e0ed657b81f34ae"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/public/test_mock.xlsx",
+      "repositoryPath": "public/test_mock.xlsx",
+      "bytes": 4992,
+      "sha256": "9c30212013d61dcbf306bd9693d5d2b862cf06324daaffc6719ee03f500d315e"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/public/window.svg",
+      "repositoryPath": "public/window.svg",
+      "bytes": 387,
+      "sha256": "d3cd4bf0c1123258fcc266409856e28c93d4fc1cf8476702225e17842900ca63"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/QUALITY_GATE.md",
+      "repositoryPath": "QUALITY_GATE.md",
+      "bytes": 5308,
+      "sha256": "22dad844963fb9c34c92b547add7ae4befde62f6786814253276d0672d25b019"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/README.md",
+      "repositoryPath": "_archive/README.original.md",
+      "bytes": 6140,
+      "sha256": "00279b02788016ec0b4ba052cd29f3df614a819e498327bb381f14435e2df09f"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/scripts/browser-acceptance.mjs",
+      "repositoryPath": "scripts/browser-acceptance.mjs",
+      "bytes": 10929,
+      "sha256": "4098ddba024bb50e18f08378b337ddbd0dcdbe4cf5a3c43e4770f74671f1e05a"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/scripts/build-mock-workbooks.mjs",
+      "repositoryPath": "scripts/build-mock-workbooks.mjs",
+      "bytes": 4291,
+      "sha256": "c1ca8959e22686c6853de76b58d71b94a0dd4f24d5dea0bd3796c963cf24c8fd"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/scripts/build-verified.sh",
+      "repositoryPath": "scripts/build-verified.sh",
+      "bytes": 235,
+      "sha256": "8980a2642642ea3e44106eb71ea651ea42f94b5d8bb3329a74bec350cd377f45"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/scripts/generate-report-qa.py",
+      "repositoryPath": "scripts/generate-report-qa.py",
+      "bytes": 20585,
+      "sha256": "f77d5a85f70e8fcb5495d47f9aadcaf0b814058c687bfa92f664d77f0a3c8bfc"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/scripts/install-ci.sh",
+      "repositoryPath": "scripts/install-ci.sh",
+      "bytes": 237,
+      "sha256": "38179c365c4a075f4636c330175157c325d0653055d47bad822b7747ece28271"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/scripts/mock-data-fixture.mjs",
+      "repositoryPath": "scripts/mock-data-fixture.mjs",
+      "bytes": 4683,
+      "sha256": "bdbc04ef9ea97d82d97247b455d87cdb0761256bd1fb373a5131fffbb2bda2ea"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/scripts/portable-build.mjs",
+      "repositoryPath": "scripts/portable-build.mjs",
+      "bytes": 630,
+      "sha256": "ae4d4553988b3f20089e2c937f8f909f94a60db466cc4fd68d5110ec37129619"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/scripts/portable-command.mjs",
+      "repositoryPath": "scripts/portable-command.mjs",
+      "bytes": 571,
+      "sha256": "b90e287a7dccf38fa36fd0fb21b768daa00e7abcc8bbb7c9afb9014ae438e498"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/scripts/portable-install.mjs",
+      "repositoryPath": "scripts/portable-install.mjs",
+      "bytes": 4220,
+      "sha256": "25d3d37223cef0d826c9aac7ce41e1d56b61b94e5d527ec9207d56fe2b157701"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/scripts/portable-regression.mjs",
+      "repositoryPath": "scripts/portable-regression.mjs",
+      "bytes": 903,
+      "sha256": "9f7ba18dce30c8f9ff964875a42099474be6da3f30d1e97f6962046100a95104"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/scripts/portable-runtime.mjs",
+      "repositoryPath": "scripts/portable-runtime.mjs",
+      "bytes": 6002,
+      "sha256": "3690425fd90c866605d0fa3411fadcf323d707b1891864053d779a409b3b84aa"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/scripts/portable-test.mjs",
+      "repositoryPath": "scripts/portable-test.mjs",
+      "bytes": 689,
+      "sha256": "25ec436f636f823a84085be4828354f49638823f6c9e414814f42ebf074ae4bb"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/scripts/portable-ts-loader.mjs",
+      "repositoryPath": "scripts/portable-ts-loader.mjs",
+      "bytes": 2301,
+      "sha256": "d908a51bdc1a42630834ba2a27f184ce0e3e68821690e31c05fc174ab6a269c8"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/scripts/portable-ts-register.mjs",
+      "repositoryPath": "scripts/portable-ts-register.mjs",
+      "bytes": 99,
+      "sha256": "d1687b601def98def3f15b6a8136b4a7b955950c874bce6c9f0df2b640f05b38"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/scripts/portable-validate-artifact.mjs",
+      "repositoryPath": "scripts/portable-validate-artifact.mjs",
+      "bytes": 1274,
+      "sha256": "06e7a222769b8b598cce8d0ccf12dd3b86448599a56b15fb6b949b37796eaa85"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/scripts/regression-loop.sh",
+      "repositoryPath": "scripts/regression-loop.sh",
+      "bytes": 240,
+      "sha256": "291ead3708edd8d2d33c7266fcb21e4878a8133bde16798c312ceb732e299e06"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/scripts/restore-accounts.mjs",
+      "repositoryPath": "scripts/restore-accounts.mjs",
+      "bytes": 2753,
+      "sha256": "8461aa743375d2ffe2e2f4ee6a9d6030a3843bf871849b3bb61de07c95d575cf"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/scripts/sites-env.sh",
+      "repositoryPath": "scripts/sites-env.sh",
+      "bytes": 1582,
+      "sha256": "29bc00ff806de5fe25039b869e32e9a458e273555b139a09b4f9c1ed8f59df73"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/scripts/trend-layout-acceptance.mjs",
+      "repositoryPath": "scripts/trend-layout-acceptance.mjs",
+      "bytes": 2225,
+      "sha256": "1e6ed75bff31df0235797a01523da4bf459dbd9f5a3fc0322028704f437f425e"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/scripts/validate-artifact.sh",
+      "repositoryPath": "scripts/validate-artifact.sh",
+      "bytes": 247,
+      "sha256": "a3133a162dde46c5d75e119c95d4517703c19ed2f5635b32922044fe733cd503"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/tests/account-reset-d1.mjs",
+      "repositoryPath": "tests/account-reset-d1.mjs",
+      "bytes": 2454,
+      "sha256": "81f45636ccc71a16e39c77026e43d995eb495baf974edc24cd93ddff2a46d0d6"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/tests/account-reset.test.mjs",
+      "repositoryPath": "tests/account-reset.test.mjs",
+      "bytes": 15812,
+      "sha256": "aaf01bbca3ce37f3d8644792827b2b9f14dc0742c2c5f3a648cbe0d130d3a3a0"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/tests/geography-mapping.test.mjs",
+      "repositoryPath": "tests/geography-mapping.test.mjs",
+      "bytes": 3482,
+      "sha256": "345110911a7c56cd197285ae6ebc214b42bad5d8be60351cce909113a6452240"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/tests/import-persistence.test.mjs",
+      "repositoryPath": "tests/import-persistence.test.mjs",
+      "bytes": 14440,
+      "sha256": "092602f36c2efb438b22360bac77c12ac4c864ecee7add699d083594c86e8a7a"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/tests/language-contract.test.mjs",
+      "repositoryPath": "tests/language-contract.test.mjs",
+      "bytes": 6483,
+      "sha256": "dc09c590825f3ff3d3a2ece0adf25129b866e2bf066b2b8e9db3c8591cbe50cf"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/tests/overview-trend.test.mjs",
+      "repositoryPath": "tests/overview-trend.test.mjs",
+      "bytes": 2934,
+      "sha256": "71537dc87c99322249f574e6e50cce62aa952049f0ee2c7756b2fcf2c1c7bcd0"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/tests/performance-behavior.test.mjs",
+      "repositoryPath": "tests/performance-behavior.test.mjs",
+      "bytes": 3556,
+      "sha256": "497203223ed4ac6f0b014fe7dcfdcdc1b4b8cbff5865e069f44c756de5f732f3"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/tests/platform-contract.test.mjs",
+      "repositoryPath": "tests/platform-contract.test.mjs",
+      "bytes": 7521,
+      "sha256": "25b3df531b168c81d8f52234c4bf732104a5762ef3303d992e36ed35cc3a2c78"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/tests/presentation-update.test.mjs",
+      "repositoryPath": "tests/presentation-update.test.mjs",
+      "bytes": 3333,
+      "sha256": "29f80fcd1bb5ea0b1ceeb3cce278e3d816475612834ef43aa4c14c9efeb72145"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/tests/regression-contract.test.mjs",
+      "repositoryPath": "tests/regression-contract.test.mjs",
+      "bytes": 12337,
+      "sha256": "fafcb6b383d496a4347da744daa1a748aae96b917e3849a68b584ffaf9b329ca"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/tests/rendered-html.test.mjs",
+      "repositoryPath": "tests/rendered-html.test.mjs",
+      "bytes": 1146,
+      "sha256": "bdce2439872534b6b6587ea0f5a7ecdb758d2de8beb482d03a8ba2508f4ab447"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/tests/reports-behavior.test.mjs",
+      "repositoryPath": "tests/reports-behavior.test.mjs",
+      "bytes": 2962,
+      "sha256": "f1aa1bb5ed6380554ff853fe8f7e12b6222f892862962083040259cc520fabe7"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/tests/test-mock-workbook.test.mjs",
+      "repositoryPath": "tests/test-mock-workbook.test.mjs",
+      "bytes": 2716,
+      "sha256": "191ae2996a8010438a9835d51583c345f09d0a3f86651e3448da658c629457c0"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/tests/visualization-contract.test.mjs",
+      "repositoryPath": "tests/visualization-contract.test.mjs",
+      "bytes": 10289,
+      "sha256": "5dda7ad633f85a0e562fef738a59d62629d4f8f2866877d911206bff29cecb33"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/tests/workbook-import.test.mjs",
+      "repositoryPath": "tests/workbook-import.test.mjs",
+      "bytes": 7432,
+      "sha256": "44f22c2656fa4792a4c9a662b3607e7ab761671eff202c139a0debb2c877c1db"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/tsconfig.json",
+      "repositoryPath": "tsconfig.json",
+      "bytes": 700,
+      "sha256": "fbff01604d6cb54694be707f26e7a0eb21a6ef796b888c6a1dab1839fa7c6ccc"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/vite.config.ts",
+      "repositoryPath": "vite.config.ts",
+      "bytes": 1871,
+      "sha256": "d20dfecdbcef83042306d6e184337e34187d2934bc86b05143591ff05f300cee"
+    },
+    {
+      "originalPath": "AJet-TGS-Dashboard/worker/index.ts",
+      "repositoryPath": "worker/index.ts",
+      "bytes": 2859,
+      "sha256": "fb2ba4ee03876b26e57e62cb6692952da176e579937f6e8e7d545e5f85fbb0d7"
+    }
+  ],
+  "lfsFiles": [],
+  "notes": [
+    "Original README is preserved under _archive/README.original.md.",
+    "Original Git metadata is preserved under _archive/git-metadata/ when present.",
+    "Wrapper folders have been removed for a repository-root layout.",
+    "No application code or original configuration values were changed.",
+    "All original files are included; force staging is required despite the preserved .gitignore."
+  ]
+}

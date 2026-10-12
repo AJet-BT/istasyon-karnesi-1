@@ -1,0 +1,41 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1785931692710,
+      "tag": "0000_jazzy_the_spike",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1785935431805,
+      "tag": "0001_wealthy_ben_parker",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1785936961114,
+      "tag": "0002_hesitant_madame_web",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1786300360036,
+      "tag": "0003_parallel_dragon_lord",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "6",
+      "when": 1791788689269,
+      "tag": "0004_foamy_mentor",
+      "breakpoints": true
+    }
+  ]
+}

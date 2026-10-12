@@ -1,0 +1,1 @@
+ALTER TABLE `export_jobs` ADD `size_bytes` integer;
